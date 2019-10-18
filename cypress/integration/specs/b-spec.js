@@ -2,7 +2,7 @@ import loginPo from "../pages/login.po";
 
 describe('b spec', function() {
     beforeEach(() =>  {
-        cy.visit('https://demo.cloud.oqton.ai', 10000)
+        cy.visit('https://demo.cloud.oqton.ai', {timeout: 10000})
     });
 
     it('Login', function() {
