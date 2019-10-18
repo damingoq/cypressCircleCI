@@ -1,12 +1,11 @@
-describe('a-spec', () => {
-  describe('page', () => {
-    beforeEach(() => {
-      debugger
-      cy.visit(Cypress.env('HOST') || 'index.html')
-    })
+import loginPo from "../pages/login.po";
 
-    it('has h2', () => {
-      cy.contains('h2', 'test')
-    })
-  })
+describe('a spec', function() {
+    beforeEach(() =>  {
+        cy.visit('https://demo.cloud.oqton.ai')
+    });
+
+    it('Login', function() {
+        loginPo.login(`daming.du@oqton.com`, `6d6@'JmT5m]N.wTx`);
+    });
 })
